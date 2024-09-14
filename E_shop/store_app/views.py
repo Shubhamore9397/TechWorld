@@ -1,9 +1,11 @@
 from django.shortcuts import render,redirect
-from store_app.models import Product,Categories,Filter_Price,Color,Brand,Contact_us
+from store_app.models import Product,Categories,Filter_Price,Color,Brand,Contact_us,Order
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.decorators import login_required
 from cart.cart import Cart
+import razorpay
+
 
 
 
@@ -185,5 +187,41 @@ def cart_detail(request):
     return render(request, 'cart/cart_detail.html')
 
 def CHECKOUT(request):
-    return render(request,'cart/checkout.html')
+    client = razorpay.Client(auth=('rzp_test_CUovvl8j2gLttO','xwCCTZ6uXUt8MctphYXlwVcP'))
+    data = {'amount':500, 'currency':'INR', 'payment_capture':'1'}
+    payment = client.order.create(data=data)
+    order_id = payment['id']
+    context = {'order_id':order_id, 'payment':payment}
+    return render(request,'cart/checkout.html',context)
+
+        
+def PLACE_ORDER(request):
+    if request.method == 'POST':
+        user = request.user
+        firstname = request.POST.get('firstname')
+        lastname = request.POST.get('lastname')
+        country = request.POST.get('country')
+        address = request.POST.get('address')
+        city = request.POST.get('city')
+        state = request.POST.get('state')
+        postcode = request.POST.get('postcode')
+        phone = request.POST.get('phone')
+        email = request.POST.get('email')
+        order_id = request.POST.get('order_id')
+        amount = request.POST.get('amount') 
+        print(amount)
+
+        payment = request.POST.get('payment')
+                                     
+        order = Order.objects.create(user=user, firstname=firstname, lastname=lastname, country=country, address=address, city=city, state=state, postcode=postcode, phone=phone, email=email, payment_id=order_id, amount=amount)
+
+        order.save()
+                                     
+    return render(request,'cart/placeorder.html')
+                                     
+                                     
+                                     
+        
+         
+         
 
