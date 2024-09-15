@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from store_app.models import Product,Categories,Filter_Price,Color,Brand,Contact_us,Order
+from store_app.models import Product,Categories,Filter_Price,Color,Brand,Contact_us,Order,OrderItem
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.decorators import login_required
@@ -209,15 +209,35 @@ def PLACE_ORDER(request):
         email = request.POST.get('email')
         order_id = request.POST.get('order_id')
         amount = request.POST.get('amount') 
-        print(amount)
-
         payment = request.POST.get('payment')
-                                     
+        
         order = Order.objects.create(user=user, firstname=firstname, lastname=lastname, country=country, address=address, city=city, state=state, postcode=postcode, phone=phone, email=email, payment_id=order_id, amount=amount)
-
         order.save()
-                                     
-    return render(request,'cart/placeorder.html')
+
+        cart = request.session.get('cart')
+        print(cart)
+
+        for i in cart:
+            a = int(cart[i]['price'])
+            b = int(cart[i]['quantity'])
+            total = a*b
+            
+
+            item = OrderItem.objects.create(
+                order = order,
+                product = cart[i]['name'],
+                image = cart[i]['image'],
+                quantity = cart[i]['quantity'],
+                price = cart[i]['price'],
+                total = total
+            )
+
+            item.save()
+
+        return render(request,'cart/placeorder.html')
+    
+def SUCCESS(request):
+    return render(request,'cart/success.html')
                                      
                                      
                                      

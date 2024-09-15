@@ -27,6 +27,8 @@ urlpatterns = [
 
     path('cart/checkout/',views.CHECKOUT,name='checkout'),
     path('placeorder/',views.PLACE_ORDER,name='placeorder'),
+    path('success/',views.SUCCESS,name='success'),
+
     
 
 ] 
