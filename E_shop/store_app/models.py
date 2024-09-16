@@ -31,7 +31,8 @@ class Color(models.Model):
 
 class Filter_Price(models.Model):
     FILTER_PRICE = (
-    ('1000 TO 10000','1000 TO 10000'),
+    ('1000 TO 5000','1000 TO 5000'),
+    ('5000 TO 10000','5000 TO 10000'),
     ('10000 TO 20000','10000 TO 20000'),
     ('20000 TO 30000','20000 TO 30000'),
     ('30000 TO 40000','30000 TO 40000'),

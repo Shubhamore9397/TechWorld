@@ -10,7 +10,7 @@
         <!-- Hero slider Active -->
         <div class="swiper-wrapper">
             <!-- Single slider item -->
-            <div class="hero-slide-item slider-height-2 swiper-slide bg-color1" data-bg-image="assets/images/hero/bg/hero-bg-2-1.webp">
+            <div class="hero-slide-item slider-height-2 swiper-slide bg-color1" data-bg-image="{% static 'assets/images/hero/bg/hero-bg-2-1.webp' %}">
                 <div class="container h-100">
                     <div class="row h-100 flex-row-reverse">
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 align-self-center sm-center-view">
@@ -19,7 +19,7 @@
                                 For Smart Device </h2>
                                 <span class="price">
                                     <span class="mini-title">Only</span>
-                                <span class="amount">$24.00</span>
+                                <span class="amount">&#8377;19999</span>
                                 </span>
                                 <a href="shop-left-sidebar.html" class="btn btn-primary text-capitalize">Shop All Devices</a>
                             </div>
@@ -35,7 +35,7 @@
                 </div>
             </div>
             <!-- Single slider item -->
-            <div class="hero-slide-item slider-height-2 swiper-slide bg-color1" data-bg-image="assets/images/hero/bg/hero-bg-2-1.webp">
+            <div class="hero-slide-item slider-height-2 swiper-slide bg-color1" data-bg-image="{% static 'assets/images/hero/bg/hero-bg-2-1.webp' %}">
                 <div class="container h-100">
                     <div class="row h-100 flex-row-reverse">
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 align-self-center sm-center-view">
@@ -44,7 +44,7 @@
                                 For Smart Device </h2>
                                 <span class="price">
                                     <span class="mini-title">Only</span>
-                                <span class="amount">$24.00</span>
+                                <span class="amount">&#8377;19999</span>
                                 </span>
                                 <a href="shop-left-sidebar.html" class="btn btn-primary text-capitalize">Shop All Devices</a>
                             </div>
@@ -79,7 +79,7 @@
                     <img src="{% static 'assets/images/banner/6.webp' %}" alt="">
                     <div class="banner-content nth-child-3">
                         <h3 class="title">Speaker</h3>
-                        <span class="category">From $69.00</span>
+                        <span class="category">From &#8377;4999</span>
                         <a href="shop-left-sidebar.html" class="shop-link">Shop Now <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
@@ -89,7 +89,7 @@
                     <img src="{% static 'assets/images/banner/7.webp' %}" alt="">
                     <div class="banner-content nth-child-2">
                         <h3 class="title">Smartphone</h3>
-                        <span class="category">From $95.00</span>
+                        <span class="category">From &#8377;9999</span>
                         <a href="shop-left-sidebar.html" class="shop-link">Shop Now <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
@@ -106,7 +106,7 @@
             <div class="col-12">
                 <div class="section-title text-center">
                     <h2 class="title">New Products</h2>
-                    <p>There are many variations of passages of Lorem Ipsum available</p>
+                    <p>The Ultimate Destination for Electronics, Shop the Latest Innovations from the Comfort of Your Home.</p>
                 </div>
             </div>
         </div>
@@ -140,11 +140,9 @@
                             <div class="actions">
                                         <button title="Add To Cart" class="action add-to-cart" data-bs-toggle="modal" data-bs-target="#exampleModal-Cart-{{forloop.counter}}"><i
                                             class="pe-7s-shopbag"></i></button>
-                                        <button class="action wishlist" title="Wishlist" data-bs-toggle="modal" data-bs-target="#exampleModal-Wishlist"><i
-                                                class="pe-7s-like"></i></button>
+                                        
                                         <button class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal-{{forloop.counter}}"><i class="pe-7s-look"></i></button>
-                                        <button class="action compare" title="Compare" data-bs-toggle="modal" data-bs-target="#exampleModal-Compare"><i
-                                                class="pe-7s-refresh-2"></i></button>
+                                        
                                     </div>
                         </div>
                     </div>
@@ -167,7 +165,7 @@
                     <div class="banner-content nth-child-3">
                         <h3 class="title">Smart Watch For <br>
                                 Your Hand</h3>
-                        <span class="category">From $69.00</span>
+                        <span class="category">From &#8377;2999</span>
                         <a href="shop-left-sidebar.html" class="shop-link">Shop Now <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
@@ -176,9 +174,9 @@
                 <div class="single-banner">
                     <img src="{% static 'assets/images/banner/9.webp' %}" alt="">
                     <div class="banner-content nth-child-2">
-                        <h3 class="title">Smart Watch For <br>
+                        <h3 class="title">Smart Mini Speaker For <br>
                                 Your Hand</h3>
-                        <span class="category">From $95.00</span>
+                        <span class="category">From &#8377;4999</span>
                         <a href="shop-left-sidebar.html" class="shop-link">Shop Now <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
@@ -194,7 +192,7 @@
             <div class="col-12">
                 <div class="section-title text-center">
                     <h2 class="title">Featured Offers</h2>
-                    <p>There are many variations of passages of Lorem Ipsum available</p>
+                    <p>Unlock Exclusive Deals, Explore Our Featured Offers on the Latest Electronics and Save Big.</p>
                 </div>
             </div>
         </div>
@@ -214,8 +212,8 @@
                         <div class="prize-content">
                             <h5 class="title"><a href="single-product.html">Ladies Smart Watch</a></h5>
                             <span class="price">
-                        <span class="old">$48.50</span>
-                            <span class="new">$38.50</span>
+                        <span class="old">&#8377;3999</span>
+                            <span class="new">&#8377;2999</span>
                             </span>
                         </div>
                         <div class="product-feature">
@@ -240,18 +238,18 @@
                             <div data-countdown="2021/09/15"></div>
                         </div>
                         <div class="prize-content">
-                            <h5 class="title"><a href="single-product.html">Ladies Smart Watch</a></h5>
+                            <h5 class="title"><a href="single-product.html">Smart Phone</a></h5>
                             <span class="price">
-                        <span class="old">$48.50</span>
-                            <span class="new">$38.50</span>
+                        <span class="old">&#8377;9999</span>
+                            <span class="new">&#8377;8999</span>
                             </span>
                         </div>
                         <div class="product-feature">
                             <ul>
-                                <li>Predecessor : <span>None.</span></li>
-                                <li>Support Type : <span>Neutral.</span></li>
-                                <li>Cushioning : <span>High Energizing.</span></li>
-                                <li>Total Weight : <span> 300gm</span></li>
+                                <li>Operating Sys : <span>Android 13.0</span></li>
+                                <li>RAM Memory Installed : <span>4 GB</span></li>
+                                <li>CPU Model : <span>High Snapdragon</span></li>
+                                <li>CPU Speed : <span>2 GHz</span></li>
                             </ul>
                         </div>
                     </div>
@@ -270,8 +268,8 @@
                         <div class="prize-content">
                             <h5 class="title"><a href="single-product.html">Ladies Smart Watch</a></h5>
                             <span class="price">
-                        <span class="old">$48.50</span>
-                            <span class="new">$38.50</span>
+                        <span class="old">&#8377;3999</span>
+                            <span class="new">&#8377;2999</span>
                             </span>
                         </div>
                         <div class="product-feature">
@@ -296,18 +294,18 @@
                             <div data-countdown="2021/09/15"></div>
                         </div>
                         <div class="prize-content">
-                            <h5 class="title"><a href="single-product.html">Ladies Smart Watch</a></h5>
+                            <h5 class="title"><a href="single-product.html">Smart Phone</a></h5>
                             <span class="price">
-                        <span class="old">$48.50</span>
-                            <span class="new">$38.50</span>
+                        <span class="old">&#8377;9999</span>
+                            <span class="new">&#8377;8999</span>
                             </span>
                         </div>
                         <div class="product-feature">
                             <ul>
-                                <li>Predecessor : <span>None.</span></li>
-                                <li>Support Type : <span>Neutral.</span></li>
-                                <li>Cushioning : <span>High Energizing.</span></li>
-                                <li>Total Weight : <span> 300gm</span></li>
+                                <li>Operating Sys : <span>Android 13.0</span></li>
+                                <li>RAM Memory Installed : <span>4 GB</span></li>
+                                <li>CPU Model : <span>High Snapdragon</span></li>
+                                <li>CPU Speed : <span>2 GHz</span></li>
                             </ul>
                         </div>
                     </div>
@@ -345,8 +343,8 @@
                         <img src="{% static 'assets/images/icons/1.png' %}" alt="">
                     </div>
                     <div class="feature-content">
-                        <h4 class="title">Free Shipping</h4>
-                        <span class="sub-title">Capped at $39 per order</span>
+                        <h4 class="title">Less Shipping</h4>
+                        <span class="sub-title">Capped at &#8377;50 per order</span>
                     </div>
                 </div>
             </div>
@@ -387,7 +385,7 @@
             <div class="col-md-12">
                 <div class="section-title text-center mb-30px0px">
                     <h2 class="title">Latest Blog</h2>
-                    <p> There are many variations of passages of Lorem Ipsum available</p>
+                    <p> From Reviews to Innovations—Our Blog Delivers the Latest Updates and Insights on Electronics.</p>
                 </div>
             </div>
         </div>
@@ -400,8 +398,8 @@
                     </div>
                     <div class="blog-text">
                         <div class="blog-athor-date line-height-1">
-                            <span class="blog-date"><i class="fa fa-calendar" aria-hidden="true"></i> 27,Jun 2030</span>
-                            <span><a class="blog-author" href="blog-grid.html"><i class="fa fa-user" aria-hidden="true"></i> Wild Nick</a></span>
+                            <span class="blog-date"><i class="fa fa-calendar" aria-hidden="true"></i> 27,Jun 2024</span>
+                            <span><a class="blog-author" href="blog-grid.html"><i class="fa fa-user" aria-hidden="true"></i>Anup Kumar</a></span>
                         </div>
                         <h5 class="blog-heading"><a class="blog-heading-link" href="blog-single-left-sidebar.html">10 Quick Tips About Smart Product</a></h5>
                         <p>Lorem ipsum dolor sit amet consl adipisi elit, sed do eiusmod templ incididunt ut labore</p>
@@ -417,8 +415,8 @@
                     </div>
                     <div class="blog-text">
                         <div class="blog-athor-date line-height-1">
-                            <span class="blog-date"><i class="fa fa-calendar" aria-hidden="true"></i> 27,Jun 2030</span>
-                            <span><a class="blog-author" href="blog-grid.html"><i class="fa fa-user" aria-hidden="true"></i> Oaklee Odom</a></span>
+                            <span class="blog-date"><i class="fa fa-calendar" aria-hidden="true"></i> 27,Aug 2024</span>
+                            <span><a class="blog-author" href="blog-grid.html"><i class="fa fa-user" aria-hidden="true"></i>Dev Patel</a></span>
                         </div>
                         <h5 class="blog-heading"><a class="blog-heading-link" href="blog-single-left-sidebar.html">5 Real-Life Lessons About Smart Product</a></h5>
                         <p>Lorem ipsum dolor sit amet consl adipisi elit, sed do eiusmod templ incididunt ut labore</p>
